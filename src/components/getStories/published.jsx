@@ -10,7 +10,7 @@ export const Published = () => {
   }, []);
 
   const getData = () => {
-    fetch("http://localhost:3001/blogs")
+    fetch("https://abhishek-json-server.herokuapp.com/blogs")
       .then((d) => d.json())
       .then((res) => {
         setData(res);
@@ -20,7 +20,7 @@ export const Published = () => {
 
   const deleteBlog = (id) => {
     axios
-      .delete(`http://localhost:3001/blogs/${id}`)
+      .delete(`https://abhishek-json-server.herokuapp.com/blogs/${id}`)
       .then((res) => console.log(res));
     getData();
   };

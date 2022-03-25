@@ -27,7 +27,7 @@ const navigate = useNavigate()
 
   const handlePublish = () => {
 
-    axios.post("http://localhost:3001/blogs",{
+    axios.post("https://abhishek-json-server.herokuapp.com/blogs",{
       title : title,
       body : body,
       date : new Date().toLocaleDateString()

@@ -22,7 +22,7 @@ const navigate = useNavigate()
     getData();
   }, []);
   const getData = () => {
-    fetch(`http://localhost:3001/blogs/${id}`)
+    fetch(`https://abhishek-json-server.herokuapp.com/blogs/${id}`)
       .then((d) => d.json())
       .then((res) => setData(res));
   };
