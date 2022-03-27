@@ -33,7 +33,6 @@ function App() {
         // const { displayName, photoURL } = user._delegate;
         const { token, claims } = await user.getIdTokenResult();
         const { name, picture } = claims;
-        console.log(claims);
         dispatch({
           type: LOGGED_IN_USER,
           payload: {
