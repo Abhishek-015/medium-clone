@@ -22,7 +22,7 @@ const navigate = useNavigate()
     getData();
   }, []);
   const getData = () => {
-    fetch(`https://abhishek-json-server.herokuapp.com/blogs/${id}`)
+    fetch(process.env.REACT_APP_MEDIUM_API + `/blogs/${id}`)
       .then((d) => d.json())
       .then((res) => setData(res));
   };

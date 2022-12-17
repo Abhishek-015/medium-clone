@@ -21,7 +21,7 @@ export const FilterTag = ()=>{
        } ,[])
     const HandleLoad = ()=>{
         
-      fetch("https://abhishek-json-server.herokuapp.com/display_feeds")
+      fetch(process.env.REACT_APP_MEDIUM_API + "/display_feeds")
       .then(res=>res.json())
       .then(res=>{
          setItems( res.filter((m)=> m.tag == tags))

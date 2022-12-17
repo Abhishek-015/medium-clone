@@ -27,7 +27,7 @@ const navigate = useNavigate()
 
   const handlePublish = () => {
 
-    axios.post("https://abhishek-json-server.herokuapp.com/blogs",{
+    axios.post(process.env.REACT_APP_MEDIUM_API + "/blogs",{
       title : title,
       body : body,
       date : new Date().toLocaleDateString()

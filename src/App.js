@@ -55,12 +55,12 @@ function App() {
 
   const getFeeds = () => {
     axios
-      .get("https://abhishek-json-server.herokuapp.com/display_feeds")
+      .get(process.env.REACT_APP_MEDIUM_API + '/display_feeds')
       .then((res) => dispatch(Saveitems(res.data)));
   };
   const getTrendingFeeds = () => {
     axios
-      .get("https://abhishek-json-server.herokuapp.com/trending_feeds")
+      .get(process.env.REACT_APP_MEDIUM_API + "/trending_feeds")
       .then((res) => dispatch(SaveItemsTrending(res.data)));
   };
 

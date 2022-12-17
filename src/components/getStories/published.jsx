@@ -10,7 +10,7 @@ export const Published = () => {
   }, []);
 
   const getData = () => {
-    fetch("https://abhishek-json-server.herokuapp.com/blogs")
+    fetch(process.env.REACT_APP_MEDIUM_API + "/blogs")
       .then((d) => d.json())
       .then((res) => {
         setData(res);
@@ -20,7 +20,7 @@ export const Published = () => {
 
   const deleteBlog = (id) => {
     axios
-      .delete(`https://abhishek-json-server.herokuapp.com/blogs/${id}`)
+      .delete(process.env.REACT_APP_MEDIUM_API + `/blogs/${id}`)
       .then((res) => console.log(res));
     getData();
   };
